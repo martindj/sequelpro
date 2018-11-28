@@ -175,7 +175,7 @@ static void *TableContentKVOContext = &TableContentKVOContext;
 		tableRowsSelectable = YES;
 		isFirstChangeInView = YES;
 
-		showFilterRuleEditor = NO;
+		showFilterRuleEditor = YES;
 
 		isFiltered = NO;
 		isLimited = NO;
@@ -2404,16 +2404,14 @@ static void *TableContentKVOContext = &TableContentKVOContext;
 			tableFilterRequired = YES;
 		}
 		else {
-			SPMainQSync(^{
-				[self setFiltersToRestore:filterSettings];
-				[self setActiveFilterToRestore:SPTableContentFilterSourceRuleFilter];
-				// Attempt to switch to the target table
-				if (![tablesListInstance selectItemWithName:[refDictionary objectForKey:@"table"]]) {
-					NSBeep();
-					[self setFiltersToRestore:nil];
-					[self setActiveFilterToRestore:SPTableContentFilterSourceNone];
-				}
-			});
+			[self setFiltersToRestore:filterSettings];
+			[self setActiveFilterToRestore:SPTableContentFilterSourceRuleFilter];
+			// Attempt to switch to the target table
+			if (![tablesListInstance selectItemWithName:[refDictionary objectForKey:@"table"]]) {
+				NSBeep();
+				[self setFiltersToRestore:nil];
+				[self setActiveFilterToRestore:SPTableContentFilterSourceNone];
+			}
 		}
 
 #ifndef SP_CODA
