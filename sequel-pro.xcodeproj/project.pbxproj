@@ -3954,6 +3954,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Frameworks/zlib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "$(SRCROOT)/Frameworks/zlib/libz.a";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.tremand.SequelPro;
 				PRODUCT_NAME = "Sequel Pro";
 				SEPARATE_STRIP = NO;
 			};
@@ -4140,6 +4141,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Frameworks/zlib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "$(SRCROOT)/Frameworks/zlib/libz.a";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.tremand.SequelPro;
 				PRODUCT_NAME = "Sequel Pro";
 				SEPARATE_STRIP = NO;
 			};
@@ -4160,6 +4162,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Frameworks/zlib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "$(SRCROOT)/Frameworks/zlib/libz.a";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.tremand.SequelPro;
 				PRODUCT_NAME = "Sequel Pro";
 				SEPARATE_STRIP = NO;
 			};
